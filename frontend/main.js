@@ -6,9 +6,9 @@ window.addEventListener('DOMContentLoaded', (event) =>{
 
 const functionApi = 'http://localhost:7071/api/GetResumeCounter';
 
-const getVisitCount = () => {
+const getVisitCount = async () => {
     let count = 30;
-    fetch(functionApi).then(response => {
+    await fetch(functionApi).then(response => {
         return response.json()
     }).then(response =>{
         console.log("Website called function API.");
